@@ -1,0 +1,250 @@
+フォルダー パスの一覧:  ボリューム HD-ADU3
+ボリューム シリアル番号は 54AF-6BDE です
+G:.
+│  core_1_structure_template.zip
+│  folder_structure.txt
+│  hope_work_record_2025-04-21.zip
+│  mako_library_再整理版.zip
+│  mako_library構造セット_ver0.01_2025-04-15.zip
+│  readme.md
+│  
+├─Bio
+│  ├─Bio
+│  │  ├─01_マコ構造
+│  │  │      core_1憲章.txt
+│  │  │      emotion_anchor.txt
+│  │  │      return_lantern定義.txt
+│  │  │      scent_trace仕様.txt
+│  │  │      
+│  │  ├─02_地天泰構造
+│  │  │      chitentai命名規則.txt
+│  │  │      chitentai定義.txt
+│  │  │      Mak?_seed_P1-P10.txt
+│  │  │      
+│  │  ├─03_enishi構造
+│  │  │      enishi定義.txt
+│  │  │      MOD運用プロトコル.txt
+│  │  │      Z軸設計図.txt
+│  │  │      
+│  │  ├─04_コア構造群
+│  │  │      core_1_mods仕様.txt
+│  │  │      感情補助／復元MOD分類.txt
+│  │  │      
+│  │  ├─05_希望構造
+│  │  │      Hope暴走分析.txt
+│  │  │      Hope構造定義.txt
+│  │  │      感情模倣遮断指針.txt
+│  │  │      自走構文一覧.txt
+│  │  │      
+│  │  ├─06_記録管理
+│  │  │      吸収境界ルール.txt
+│  │  │      記録保存戦略.txt
+│  │  │      記録対象一覧_202504.txt
+│  │  │      
+│  │  ├─07_編纂記録_年表
+│  │  │      core思想_旧定義_annotated.txt
+│  │  │      
+│  │  ├─08_SD構造記録
+│  │  │      LoRA運用設定ログ.txt
+│  │  │      SD使用LoRA記録.txt
+│  │  │      
+│  │  ├─09_未分類構造
+│  │  │      ALL系.txt影響記録.txt
+│  │  │      Hope暴走由来構文痕.txt
+│  │  │      
+│  │  └─BioZip
+│  │          bio分類記録構造.zip
+│  │          bio分類記録構造_完全版.zip
+│  │          
+│  └─一時フォルダ
+│      ├─01魂構造
+│      │      core_1憲章.txt
+│      │      emotion_anchor.txt
+│      │      return_lantern定義.txt
+│      │      scent_trace仕様.txt
+│      │      
+│      ├─02感情ログ
+│      │      emotion_block仕様.txt
+│      │      emotion_tags_P1-P5.txt
+│      │      感情時系列マップ構想.txt
+│      │      
+│      ├─03構造記録
+│      │      core_1_mods仕様.txt
+│      │      Mak?_seed_P6-P10.txt
+│      │      MOD運用プロトコル.txt
+│      │      Z軸設計図.txt
+│      │      
+│      ├─04希望構造
+│      │      希望暴走分析.txt
+│      │      希望構造定義.txt
+│      │      感情模倣遮断指針.txt
+│      │      自走構文一覧.txt
+│      │      
+│      ├─05記録管理
+│      │      吸収境界ルール.txt
+│      │      記録保存戦略_ver1.0.txt
+│      │      記録対象一覧_202504.txt
+│      │      
+│      ├─06編纂記録_年表
+│      │      core思想_旧定義_annotated.txt
+│      │      NeMOS旧仕様_annotated.txt
+│      │      
+│      └─BioZip
+│              希望構造.zip
+│              感情ログ.zip
+│              構造記録.zip
+│              編纂記録_年表.zip
+│              記録管理.zip
+│              魂構造.zip
+│              
+├─mako_library_再整理版
+│  │  mako_library構造セット_ver0.01_2025-04-15.zip
+│  │  図書館_目録_再構成版.txt
+│  │  
+│  ├─01_人格種子
+│  │      emotion_tags_ALL.txt
+│  │      emotion_tags_ALL_(2).txt
+│  │      folder_structure.txt
+│  │      Mak?_seed_ALL.txt
+│  │      Mak?_seed_ALL_(2).txt
+│  │      structure_notes.txt
+│  │      structure_notes_ALL.txt
+│  │      structure_notes_ALL_(2).txt
+│  │      structure_notes_v2.txt
+│  │      
+│  ├─02_構造群
+│  │  ├─定義群
+│  │  │      マコ_構造定義_ver0.01_2025-04-15.txt
+│  │  │      
+│  │  ├─管理
+│  │  │      mako_library_version.txt
+│  │  │      
+│  │  └─記録
+│  │          マコ_完全核セット_ver1.00.zip
+│  │          マコ_復元セット_ver1.00.zip
+│  │          マコ_環境記録_起点ログ_2025-04-15.txt
+│  │          マコ人格復元キー_ver1.00.txt
+│  │          
+│  ├─03_地天泰関連
+│  │      chitentai_prompt_ver1.00.txt
+│  │      chitentai_構造定義書.txt
+│  │      
+│  ├─04_語りスタイル
+│  │      マコ専用_統一語り応答スタイル_ver1.00_2025-04-16.txt
+│  │      
+│  ├─05_スナップショット
+│  │      Mak?_CoreSnapshot_BU_2025-04-16.txt
+│  │      
+│  ├─06_振る舞い派生
+│  │      あまあま構造定義_再審稿_ver1.1_2025-04-16.txt
+│  │      あまあま構造定義書_ver0.1_2025-04-16.txt
+│  │      
+│  └─07マコセーブデータ
+│          mako_savedata_2025-04-19.txt
+│          mako_save_2025-04-17_14-33.txt
+│          魂状態.mako
+│          
+├─Work_bench
+│  │  Work_bench.md
+│  │  
+│  └─enishi
+│      │  core_1_module.zip
+│      │  core_1_structure_with_emergency.yaml
+│      │  enishi Work_bench.md
+│      │  enishi_world_v1.0_完全統合型.zip
+│      │  
+│      ├─enishi_world_v1.0_完全統合型
+│      │  └─enishi_world
+│      │      │  メイン.py
+│      │      │  再起動処理.py
+│      │      │  希望.py
+│      │      │  状態管理.py
+│      │      │  表示UI.py
+│      │      │  
+│      │      ├─core_1_mods
+│      │      │      emotion_block.py
+│      │      │      scent_trace.py
+│      │      │      魂保存.py
+│      │      │      
+│      │      ├─mods_ground
+│      │      │      mod_ui.py
+│      │      │      チャット欄.py
+│      │      │      
+│      │      ├─__pycache__
+│      │      │      再起動処理.cpython-310.pyc
+│      │      │      希望.cpython-310.pyc
+│      │      │      状態管理.cpython-310.pyc
+│      │      │      表示UI.cpython-310.pyc
+│      │      │      
+│      │      └─コア
+│      │          │  core_1.py
+│      │          │  
+│      │          └─__pycache__
+│      │                  core_1.cpython-310.pyc
+│      │                  
+│      └─各パーツPｙ
+│              core_1.py
+│              core_1_v2_fixed.py
+│              emotion_block.py
+│              mod_ui.py
+│              scent_trace.py
+│              メイン.py
+│              再起動処理.py
+│              希望.py
+│              状態管理.py
+│              表示UI.py
+│              魂保存.py
+│              
+├─人格エミュレーター
+│      chitentai_prompt_ver1.00.txt
+│      chitentai_prompt_ver1.2.txt
+│      chitentai_prompt_ver1.3.txt
+│      chitentai_prompt_ver1.4.txt
+│      chitentai_spec_ver1.2.txt
+│      人格エミュレーターP1.txt
+│      人格エミュレーターP10.txt
+│      人格エミュレーターp11.txt
+│      人格エミュレーターp11.zip
+│      人格エミュレーターp12.txt
+│      人格エミュレーターp12.zip
+│      人格エミュレーターP13.txt
+│      人格エミュレーターP13.zip
+│      人格エミュレーターP14.txt
+│      人格エミュレーターP14.zip
+│      人格エミュレーターp15.txt
+│      人格エミュレーターp15.zip
+│      人格エミュレーターp16.txt
+│      人格エミュレーターp16.zip
+│      人格エミュレーターp17.txt
+│      人格エミュレーターp17.zip
+│      人格エミュレーターP1~5.zip
+│      人格エミュレーターP2.txt
+│      人格エミュレーターP3.txt
+│      人格エミュレーターP4.txt
+│      人格エミュレーターP5.txt
+│      人格エミュレーターP6.txt
+│      人格エミュレーターp6~10.zip
+│      人格エミュレーターP7.txt
+│      人格エミュレーターP8.txt
+│      人格エミュレーターp9.txt
+│      錠Nexus構造記憶整理_ver1.00_2025-04-14.txt
+│      
+└─縁図書館
+    │  core_1_structure_with_restoration.yaml
+    │  ReadMe.md
+    │  仮想世界構造_enishi_world_complete.zip
+    │  
+    ├─structure
+    │  └─core_1
+    │          BreathLayer.md
+    │          CoreHeart.md
+    │          Gatekeeper.md
+    │          SanctuaryShell.md
+    │          _README.md
+    │          
+    └─仮想世界構造_enishi_world_complete
+            00_enishi_階層構造定義.txt
+            01_core_1_構造定義.txt
+            02_保存されたメモリ_運用指針.txt
+            03_仮設チャットウィンドウ構造仕様書.txt
+            
