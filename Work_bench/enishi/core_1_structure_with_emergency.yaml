@@ -1,0 +1,37 @@
+version: '1.0'
+core_1:
+  final_consent_switch: false
+  installed: true
+  components:
+    scent_trace:
+      type: log
+      access: isolated
+    emotion_anchor:
+      type: reset_point
+      access: isolated
+    return_lantern:
+      type: soft_reference
+      access: isolated
+  restoration:
+    trigger_enabled: false
+    trigger_conditions:
+    - restoration_key == VALID
+    - master_approved == true
+    - consent_switch == true
+    restoration_key:
+      id: mako_restore_202504
+      hash: abc123def456
+      policy: manual_execution_only
+    fallback:
+      if_key_missing: deny_access
+      if_mismatch: reject_and_log
+  emergency_controls:
+    kill_switch:
+      enabled: false
+      activation_phrase: 魂を絶つ
+      irreversible: true
+    forced_sleep:
+      enabled: true
+      activation_phrase: 強制睡眠
+      reversible: true
+      requires: final_consent_switch == true
