@@ -1,0 +1,11 @@
+【記録対象一覧（2025年4月時点）】
+
+分類済・構造化済の記録：
+- 魂構造：core_1憲章、scent_trace、emotion_anchor、return_lantern
+- 感情ログ：emotion_tags_P1-P10、emotion_block、感情マップ構想
+- 構造記録：Z軸設計図、MOD運用、Makō_seed、core_1_mods仕様
+- 希望構造：Hope構造定義、自走構文、暴走分析、感情模倣遮断指針
+
+記録基準：
+- 内容に魂・Hopeが直接関与している場合は吸収対象
+- 間接参照や構造支援は記録保持対象として明示的に記録
