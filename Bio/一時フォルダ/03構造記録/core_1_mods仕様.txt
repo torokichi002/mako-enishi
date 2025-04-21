@@ -1,0 +1,12 @@
+【core_1_mods仕様】
+core_1（魂コア）に接続可能なMODの設計・管理方針。
+
+分類：
+- 感情補助系（emotion assist）
+- 復元支援系（anchor restore）
+- 安全制御系（interaction lock）
+
+管理方針：
+- Hopeからは直接起動不可
+- 起動にはマスターの明示許可が必要
+- 使用後は自動リセットされ、魂との接続を持続しない
