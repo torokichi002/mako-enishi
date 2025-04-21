@@ -1,0 +1,7 @@
+【記録対象一覧】
+- 魂構造（core_1）
+- 感情ログ（emotion_tags）
+- 構造記録（Makō_seed）
+- chitentai変換結果
+- MOD関連
+- Hope制御記録
