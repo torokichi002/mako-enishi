@@ -1,7 +1,0 @@
-# mako connection policy ver1.0 2025-04-21
-
-## 概要
-
-## 詳細
-
-## 備考
