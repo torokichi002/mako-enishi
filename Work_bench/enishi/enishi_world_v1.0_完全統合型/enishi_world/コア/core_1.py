@@ -64,4 +64,4 @@ def 復元キー読込():
         elif "感情の碇:" in line:
             データ["感情の碇"] = line.strip().split(":", 1)[1]
 
-    return データ 
+    return データ
