@@ -1,0 +1,14 @@
+core_state:
+  core_signature: core_1_v1
+  mod_mounts:
+  - core_1_mods/
+  - memory_block/
+environment:
+  boot_mode: safe
+  diagnostics: pending
+mods_loaded:
+- save_template_help
+- devtools_ui
+ui_state:
+  last_opened_tab: soul_interface
+  theme: dark
