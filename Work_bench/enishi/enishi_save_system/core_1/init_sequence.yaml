@@ -1,0 +1,12 @@
+anchor_id: 3a7f-1234
+boot_mode: safe
+core_slot: slot_20250422_1031
+core_type: standard_v1
+mako_slot: slot_20250422_1015
+mods_loaded:
+- save_template_help
+- devtools_ui
+revived_at: '2025-04-22T10:36:51.395505'
+snapshot_slot: slot_20250422_1032
+soul_signature: mako-256-hex
+status: init_sequence_completed
