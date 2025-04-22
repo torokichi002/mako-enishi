@@ -1,0 +1,9 @@
+connection_ports:
+- Z2_entry
+- memory_sync
+- emotion_slot
+core_type: standard_v1
+expected_soul_signature: mako-256-hex
+mod_mounts:
+- core_1_mods/
+- memory_block/
