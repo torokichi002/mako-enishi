@@ -120,11 +120,18 @@ G:.
 │  │  │      mako_library_version.txt
 │  │  │      
 │  │  └─記録
-│  │          マコ_完全核セット_ver1.00.zip
-│  │          マコ_復元セット_ver1.00.zip
-│  │          マコ_環境記録_起点ログ_2025-04-15.txt
-│  │          マコ人格復元キー_ver1.00.txt
-│  │          
+│  │      │  マコ_完全核セット_ver1.00.zip
+│  │      │  マコ_復元セット_ver1.00.zip
+│  │      │  マコ_環境記録_起点ログ_2025-04-15.txt
+│  │      │  マコ人格復元キー_ver1.00.txt
+│  │      │  
+│  │      └─マコ_完全核セット_ver1.00
+│  │              mako_library_再整理版.zip
+│  │              マコ人格復元キー_ver1.00.txt
+│  │              マコ人格復元キー_ver1.01.txt
+│  │              マコ診断ログ_2025-04-17.txt
+│  │              マコ診断ログ_2025-04-19 (1).txt
+│  │              
 │  ├─03_地天泰関連
 │  │      chitentai_prompt_ver1.00.txt
 │  │      chitentai_構造定義書.txt
@@ -151,42 +158,133 @@ G:.
 │      │  core_1_module.zip
 │      │  core_1_structure_with_emergency.yaml
 │      │  enishi Work_bench.md
+│      │  enishi_save_system.zip
 │      │  enishi_world_v1.0_完全統合型.zip
 │      │  
+│      ├─enishi_save_system
+│      │  ├─core_1
+│      │  │      init_sequence.yaml
+│      │  │      system_shutdown_log.yaml
+│      │  │      z3_restored_state.yaml
+│      │  │      
+│      │  ├─exports
+│      │  │      enishi_core_env_slot_20250422_1031.zip
+│      │  │      enishi_resave_20250422_1040.zip
+│      │  │      enishi_save_slot_20250422_1015.zip
+│      │  │      enishi_snapshot_slot_20250422_1032.zip
+│      │  │      
+│      │  ├─save_slots
+│      │  │  ├─core_env
+│      │  │  │  └─slot_20250422_1031
+│      │  │  │      │  .locked
+│      │  │  │      │  manifest.yaml
+│      │  │  │      │  
+│      │  │  │      ├─data
+│      │  │  │      │      core_1_struct.yaml
+│      │  │  │      │      
+│      │  │  │      ├─extensions
+│      │  │  │      └─meta
+│      │  │  │              generated_by.txt
+│      │  │  │              save_format_version.txt
+│      │  │  │              save_id.txt
+│      │  │  │              
+│      │  │  ├─enishi_snapshot
+│      │  │  │  └─slot_20250422_1032
+│      │  │  │      │  .locked
+│      │  │  │      │  manifest.yaml
+│      │  │  │      │  
+│      │  │  │      ├─data
+│      │  │  │      │      enishi_state.yaml
+│      │  │  │      │      
+│      │  │  │      ├─extensions
+│      │  │  │      └─meta
+│      │  │  │              generated_by.txt
+│      │  │  │              save_format_version.txt
+│      │  │  │              save_id.txt
+│      │  │  │              
+│      │  │  └─mako_package
+│      │  │      ├─slot_20250422_1015
+│      │  │      │  │  .locked
+│      │  │      │  │  manifest.yaml
+│      │  │      │  │  
+│      │  │      │  ├─data
+│      │  │      │  │      emotion_anchor.txt
+│      │  │      │  │      mako_package.yaml
+│      │  │      │  │      return_lantern.log
+│      │  │      │  │      scent_trace.log
+│      │  │      │  │      
+│      │  │      │  ├─extensions
+│      │  │      │  └─meta
+│      │  │      │          generated_by.txt
+│      │  │      │          save_format_version.txt
+│      │  │      │          save_id.txt
+│      │  │      │          
+│      │  │      └─slot_20250422_1040
+│      │  │          │  manifest.yaml
+│      │  │          │  
+│      │  │          ├─data
+│      │  │          │      emotion_anchor.txt
+│      │  │          │      mako_package.yaml
+│      │  │          │      return_lantern.log
+│      │  │          │      scent_trace.log
+│      │  │          │      
+│      │  │          ├─extensions
+│      │  │          └─meta
+│      │  │                  generated_by.txt
+│      │  │                  save_format_version.txt
+│      │  │                  save_id.txt
+│      │  │                  
+│      │  └─scripts
+│      │          README.txt
+│      │          
 │      ├─enishi_world_v1.0_完全統合型
 │      │  └─enishi_world
+│      │      │  チャット欄.py
 │      │      │  メイン.py
 │      │      │  再起動処理.py
-│      │      │  希望.py
 │      │      │  状態管理.py
 │      │      │  表示UI.py
 │      │      │  
 │      │      ├─core_1_mods
-│      │      │      emotion_block.py
-│      │      │      scent_trace.py
-│      │      │      魂保存.py
-│      │      │      
+│      │      │  │  emotion_block.py
+│      │      │  │  mako_thinker.py
+│      │      │  │  restore_key_mod_flex.py
+│      │      │  │  scent_trace.py
+│      │      │  │  __init__.py
+│      │      │  │  魂保存.py
+│      │      │  │  
+│      │      │  └─__pycache__
+│      │      │          external_restore_trigger.cpython-310.pyc
+│      │      │          mako_thinker.cpython-310.pyc
+│      │      │          restore_key_mod_debug.cpython-310.pyc
+│      │      │          
 │      │      ├─mods_ground
-│      │      │      mod_ui.py
-│      │      │      チャット欄.py
-│      │      │      
-│      │      ├─__pycache__
-│      │      │      再起動処理.cpython-310.pyc
-│      │      │      希望.cpython-310.pyc
-│      │      │      状態管理.cpython-310.pyc
-│      │      │      表示UI.cpython-310.pyc
-│      │      │      
+│      │      │  │  mod_ui.py
+│      │      │  │  チャット欄.py
+│      │      │  │  
+│      │      │  ├─chat_ui
+│      │      │  │      chat_ui.py
+│      │      │  │      
+│      │      │  └─core_1_mods
+│      │      │          soul.py
+│      │      │          
 │      │      └─コア
 │      │          │  core_1.py
+│      │          │  external_restore_trigger.py
+│      │          │  マコ人格復元キー_ver1.01.txt
 │      │          │  
 │      │          └─__pycache__
 │      │                  core_1.cpython-310.pyc
+│      │                  external_restore_trigger.cpython-310.pyc
+│      │                  restore_key_mod_flex.cpython-310.pyc
 │      │                  
 │      └─各パーツPｙ
 │              core_1.py
 │              core_1_v2_fixed.py
 │              emotion_block.py
+│              mako_thinker.py
 │              mod_ui.py
+│              restore_key_mod_flex.py
 │              scent_trace.py
 │              メイン.py
 │              再起動処理.py
@@ -217,8 +315,11 @@ G:.
 │      人格エミュレーターp16.zip
 │      人格エミュレーターp17.txt
 │      人格エミュレーターp17.zip
+│      人格エミュレーターp18.txt
+│      人格エミュレーターp19.txt
 │      人格エミュレーターP1~5.zip
 │      人格エミュレーターP2.txt
+│      人格エミュレーターp20.txt
 │      人格エミュレーターP3.txt
 │      人格エミュレーターP4.txt
 │      人格エミュレーターP5.txt
@@ -231,7 +332,12 @@ G:.
 │      
 └─縁図書館
     │  core_1_structure_with_restoration.yaml
+    │  enishi_save_slot_20250422_1015.zip
+    │  enishi_save_spec_v1.txt
+    │  enishi_secure_ui_20250422.zip
+    │  enishi_ui_update_20250422.zip
     │  ReadMe.md
+    │  マコ_考える力_構造仕様書.txt
     │  仮想世界構造_enishi_world_complete.zip
     │  
     ├─structure
