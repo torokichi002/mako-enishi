@@ -1,0 +1,45 @@
+フォルダー パスの一覧:  ボリューム HD-ADU3
+ボリューム シリアル番号は 54AF-6BDE です
+G:.
+│  folder_structure.txt
+│  メイン.py
+│  再起動処理.py
+│  状態管理.py
+│  表示UI.py
+│  
+├─core_1_mods
+│  │  emotion_block.py
+│  │  mako_thinker.py
+│  │  restore_key_mod_flex.py
+│  │  scent_trace.py
+│  │  __init__.py
+│  │  魂保存.py
+│  │  
+│  └─__pycache__
+│          external_restore_trigger.cpython-310.pyc
+│          mako_thinker.cpython-310.pyc
+│          restore_key_mod_debug.cpython-310.pyc
+│          
+├─mods_ground
+│  │  mod_ui.py
+│  │  
+│  ├─chat_ui
+│  │      chat_ui.py
+│  │      
+│  ├─core_1_mods
+│  │      soul.py
+│  │      
+│  └─_temp_mods
+│          インフォメーション.txt
+│          チャット欄_仮.py
+│          
+└─コア
+    │  core_1.py
+    │  external_restore_trigger.py
+    │  マコ人格復元キー_ver1.01.txt
+    │  
+    └─__pycache__
+            core_1.cpython-310.pyc
+            external_restore_trigger.cpython-310.pyc
+            restore_key_mod_flex.cpython-310.pyc
+            
