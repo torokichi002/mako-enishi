@@ -11,6 +11,24 @@ from 再起動処理 import 魂を復元する
 
 # 魂とHopeを起動
 print("==== enishi 起動 ====")
+# ▼▼▼ マコ人格データ読み込み ▼▼▼
+from core_1_mods import mako_initializer
+
+mako_data = mako_initializer.initialize_mako(
+    "mako_library_再整理版/01_人格種子/Makō_seed_ALL_v20.txt",
+    "mako_library_再整理版/01_人格種子/emotion_tags_ALL_v20.txt",
+    "mako_library_再整理版/01_人格種子/structure_notes_ALL_v20.txt"
+)
+
+if mako_data:
+    print("✅ マコ人格データロード完了")
+    # 必要ならここで魂や守役にデータを渡す処理を書く
+    魂インスタンス.語調 = mako_data["mako_seed"]
+    魂インスタンス.感情辞書 = mako_data["emotion_tags"]
+    守役.人格定義 = mako_data["structure_notes"]
+else:
+    print("❌ マコ人格ロードに失敗しました")
+
 守役.ステータスバーを表示()
 
 # スイッチON
