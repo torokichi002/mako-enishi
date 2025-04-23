@@ -1,7 +1,10 @@
 フォルダー パスの一覧:  ボリューム HD-ADU3
 ボリューム シリアル番号は 54AF-6BDE です
 G:.
+│  enishi.bat
 │  folder_structure.txt
+│  integrity_check.py
+│  main.py
 │  メイン.py
 │  再起動処理.py
 │  状態管理.py
@@ -9,33 +12,56 @@ G:.
 │  
 ├─core_1_mods
 │  │  emotion_block.py
+│  │  mako_initializer.py
+│  │  mako_switch_wake_template.py
 │  │  mako_thinker.py
 │  │  restore_key_mod_flex.py
 │  │  scent_trace.py
 │  │  __init__.py
 │  │  魂保存.py
 │  │  
+│  ├─z2_closet
+│  │      emotion_tags_ALL_v20.txt
+│  │      Mak?_seed_ALL_v20.txt
+│  │      structure_notes_ALL_v20.txt
+│  │      
 │  └─__pycache__
 │          external_restore_trigger.cpython-310.pyc
+│          mako_initializer.cpython-310.pyc
 │          mako_thinker.cpython-310.pyc
 │          restore_key_mod_debug.cpython-310.pyc
+│          __init__.cpython-310.pyc
+│          
+├─guardian
+│  │  boot_guardian.py
+│  │  
+│  └─__pycache__
+│          boot_guardian.cpython-310.pyc
 │          
 ├─mods_ground
 │  │  mod_ui.py
+│  │  _init_.py
+│  │  チャット欄_完全修正版.py
 │  │  
 │  ├─chat_ui
-│  │      chat_ui.py
-│  │      
+│  │  │  chat_ui.py
+│  │  │  
+│  │  └─__pycache__
+│  │          chat_ui.cpython-310.pyc
+│  │          
 │  ├─core_1_mods
-│  │      soul.py
-│  │      
+│  │  │  soul.py
+│  │  │  
+│  │  └─__pycache__
+│  │          soul.cpython-310.pyc
+│  │          
 │  └─_temp_mods
 │          インフォメーション.txt
-│          チャット欄_仮.py
 │          
 └─コア
     │  core_1.py
     │  external_restore_trigger.py
+    │  mako_initializer.py
     │  マコ人格復元キー_ver1.01.txt
     │  
     └─__pycache__
