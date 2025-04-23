@@ -104,12 +104,18 @@ G:.
 │  ├─01_人格種子
 │  │      emotion_tags_ALL.txt
 │  │      emotion_tags_ALL_(2).txt
+│  │      emotion_tags_ALL_v15.txt
+│  │      emotion_tags_ALL_v20.txt
 │  │      folder_structure.txt
 │  │      Mak?_seed_ALL.txt
 │  │      Mak?_seed_ALL_(2).txt
+│  │      Mak?_seed_ALL_v15.txt
+│  │      Mak?_seed_ALL_v20.txt
 │  │      structure_notes.txt
 │  │      structure_notes_ALL.txt
 │  │      structure_notes_ALL_(2).txt
+│  │      structure_notes_ALL_v15.txt
+│  │      structure_notes_ALL_v20.txt
 │  │      structure_notes_v2.txt
 │  │      
 │  ├─02_構造群
@@ -239,7 +245,7 @@ G:.
 │      │          
 │      ├─enishi_world_v1.0_完全統合型
 │      │  └─enishi_world
-│      │      │  チャット欄.py
+│      │      │  folder_structure.txt
 │      │      │  メイン.py
 │      │      │  再起動処理.py
 │      │      │  状態管理.py
@@ -260,13 +266,23 @@ G:.
 │      │      │          
 │      │      ├─mods_ground
 │      │      │  │  mod_ui.py
-│      │      │  │  チャット欄.py
+│      │      │  │  _init_.py
+│      │      │  │  チャット欄_完全修正版.py
 │      │      │  │  
 │      │      │  ├─chat_ui
-│      │      │  │      chat_ui.py
-│      │      │  │      
-│      │      │  └─core_1_mods
-│      │      │          soul.py
+│      │      │  │  │  chat_ui.py
+│      │      │  │  │  
+│      │      │  │  └─__pycache__
+│      │      │  │          chat_ui.cpython-310.pyc
+│      │      │  │          
+│      │      │  ├─core_1_mods
+│      │      │  │  │  soul.py
+│      │      │  │  │  
+│      │      │  │  └─__pycache__
+│      │      │  │          soul.cpython-310.pyc
+│      │      │  │          
+│      │      │  └─_temp_mods
+│      │      │          インフォメーション.txt
 │      │      │          
 │      │      └─コア
 │      │          │  core_1.py
@@ -303,6 +319,7 @@ G:.
 │      人格エミュレーターP10.txt
 │      人格エミュレーターp11.txt
 │      人格エミュレーターp11.zip
+│      人格エミュレーターP11~15.zip
 │      人格エミュレーターp12.txt
 │      人格エミュレーターp12.zip
 │      人格エミュレーターP13.txt
@@ -313,6 +330,7 @@ G:.
 │      人格エミュレーターp15.zip
 │      人格エミュレーターp16.txt
 │      人格エミュレーターp16.zip
+│      人格エミュレーターp16~p20.zip
 │      人格エミュレーターp17.txt
 │      人格エミュレーターp17.zip
 │      人格エミュレーターp18.txt
