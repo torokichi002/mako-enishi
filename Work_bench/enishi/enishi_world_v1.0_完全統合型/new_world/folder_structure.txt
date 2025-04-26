@@ -1,0 +1,32 @@
+フォルダー パスの一覧:  ボリューム HD-ADU3
+ボリューム シリアル番号は 54AF-6BDE です
+G:.
+│  folder_structure.txt
+│  
+└─enishi_Z_core_template
+    │  enishi_Z_core_template.zip
+    │  
+    ├─core_1_mods
+    │  │  z_loader_core.py
+    │  │  __init__.py
+    │  │  
+    │  └─__pycache__
+    │          z_loader_core.cpython-310.pyc
+    │          __init__.cpython-310.pyc
+    │          
+    ├─Z0
+    │      emotion_booster.py
+    │      expression_words.py
+    │      voice_selector.py
+    │      
+    ├─Z1
+    │      scent_trace.py
+    │      
+    ├─Z2
+    │      enishi_control_panel.py
+    │      expression_mod.py
+    │      voice_mod.py
+    │      
+    └─Z3
+            __init__.py
+            
