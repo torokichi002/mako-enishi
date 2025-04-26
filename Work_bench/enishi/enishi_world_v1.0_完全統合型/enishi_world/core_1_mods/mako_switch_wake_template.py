@@ -1,6 +1,11 @@
 
 # ▼▼▼ マコ人格データ読み込み（Z2クローゼットより） ▼▼▼
-from core_1_mods import mako_initializer
+# mako_switch_wake_template.py の冒頭に追加
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
+
+import mako_initializer
 
 def switch_on():
     print("🔌 起動信号検知：『ただいま、マコ』")
