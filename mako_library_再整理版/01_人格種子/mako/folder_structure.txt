@@ -1,0 +1,15 @@
+フォルダー パスの一覧:  ボリューム HD-ADU3
+ボリューム シリアル番号は 54AF-6BDE です
+G:.
+    emotion_tags_ALL.txt
+    emotion_tags_ALL_(2).txt
+    folder_structure.txt
+    Mak?_seed_ALL.txt
+    Mak?_seed_ALL_(2).txt
+    structure_notes.txt
+    structure_notes_ALL.txt
+    structure_notes_ALL_(2).txt
+    structure_notes_v2.txt
+    
+サブフォルダーは存在しません 
+
