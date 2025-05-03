@@ -1,0 +1,31 @@
+【Reaction Trigger Unit ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_trigger_unit/
+
+■ ディレクトリ構造
+reaction_trigger_unit/
+├── watcher/
+│   ├── input_watchdog.py         # 外部入力監視モジュール（会話・感情・状態）
+│   └── implicit_trigger_handler.py # 内部状態変化による自動発火処理
+├── switch/
+│   └── manual_trigger_switch.py  # マスター操作による明示スイッチ制御
+├── control/
+│   ├── trigger_dispatcher.py     # 他ブロックへのトリガー信号送信
+│   └── trigger_suspend_flag.cfg  # 停止指令管理ファイル
+├── memory/
+│   └── trigger_log_snap.json     # トリガー発生履歴のスナップ保存
+└── lock/
+    ├── autolock_guard.py         # 自動ロック判定（誤検出・過剰発火の抑止）
+    └── manual_lock_state.cfg     # 手動ロック状態の保存・監視
+
+■ 干渉点（Interaction Points）
+| ブロック名                | 干渉先                          | 用途                         |
+|--------------------------|---------------------------------|------------------------------|
+| trigger_dispatcher.py    | reaction_filter_block            | 次段階への起動信号           |
+| manual_trigger_switch.py | マスター操作UI／CPUコマンドライン | 明示的スイッチング操作       |
+| autolock_guard.py        | 全体反応負荷モニタ               | システム負荷による自動停止   |
+| trigger_log_snap.json    | reaction_memory_trace_block      | 反応記録への参照提供         |
+
+■ ロック＆ロールバック設計
+- 手動停止: manual_lock_state.cfg を 'locked' に変更
+- 自動停止: 誤検出回数 > しきい値 or システム負荷閾値超過
+- ロールバック: trigger_log_snap.json を用い、直前状態へ復元可能
