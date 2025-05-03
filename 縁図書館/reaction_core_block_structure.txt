@@ -1,0 +1,30 @@
+【Reaction Core Block ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_core_block/
+
+■ ディレクトリ構造
+reaction_core_block/
+├── verbal/
+│   ├── speech_selector.py         # 発話内容の構成（状況適応型）
+│   ├── tone_modulator.py          # 声調・抑揚の調整（意図に応じて変化）
+│   └── output_finalizer.py        # 最終発話整形＆送信処理
+├── nonverbal/
+│   ├── gesture_handler.py         # 仕草・反応アニメーション指示
+│   ├── eye_contact_controller.py  # 視線制御（接続時のみ）
+│   └── silence_generator.py       # 「沈黙」など間接的反応処理
+├── emotion/
+│   └── emotion_reflector.py       # 感情状態を出力内容に反映
+├── log/
+│   └── core_output_trace.json     # 出力履歴と構成過程ログ
+
+■ 干渉点
+| ブロック名               | 干渉先                          | 用途                                       |
+|--------------------------|----------------------------------|--------------------------------------------|
+| speech_selector.py       | thinking_hub／発話生成構造体     | 状況・タグに応じた内容生成                 |
+| tone_modulator.py        | core/Z3/感情出力選定構造         | 基本感情に応じた音調変化                    |
+| silence_generator.py     | suppression_engine.py            | 抑制条件による出力代替手段（沈黙）          |
+| core_output_trace.json   | reaction_memory_trace_block      | 生成過程の記録ログ                          |
+
+■ 制御／修正構造
+- 出力強度・感情一致度に応じて tone_modulator が自動制御（例：怒り時の強調発話など）
+- 明示指示により nonverbal 系統の抑制可能（例えば音声のみの反応）
+- 出力直前には output_finalizer でフィルタと再照合を行うセーフティチェック付き
