@@ -1,0 +1,29 @@
+【Reaction Block Status Monitor ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_block_status_monitor/
+
+■ ディレクトリ構造
+reaction_block_status_monitor/
+├── scanner/
+│   └── block_health_checker.py     # 各ブロックの健全性検査（定期）
+├── metrics/
+│   ├── load_tracker.py             # CPU・I/O負荷の追跡
+│   └── latency_watcher.py          # 応答遅延・滞留確認
+├── alert/
+│   ├── alert_flag_dispatcher.py    # 異常検知時の通報・制御信号発行
+│   └── degradation_report.json     # 劣化・遅延の記録ログ
+└── policy/
+    └── monitoring_rules.json       # チェック対象と検出条件の定義
+
+■ 干渉点
+| 機能モジュール              | 干渉先ブロック                        | 用途                            |
+|----------------------------|--------------------------------------|---------------------------------|
+| block_health_checker.py    | 全Reactionブロック                    | 稼働状態のチェック              |
+| load_tracker.py            | CPUリソース監視／非同期反応構造体     | 負荷監視                        |
+| alert_flag_dispatcher.py   | reaction_override_control_block      | 異常時の緊急信号発行           |
+| degradation_report.json    | reaction_memory_trace_block          | 状態劣化の履歴保管              |
+
+■ 安定稼働と自動対応構造
+- monitoring_rules.json により：
+  - 閾値超過時のアラートレベル（低／中／高）を定義
+  - 自動通報 or ログのみ or 即時停止 などの反応を分岐可能
+- latency_watcher.py は応答フレーム単位での微細遅延も検出可能
