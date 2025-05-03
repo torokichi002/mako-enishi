@@ -1,0 +1,31 @@
+【Reaction Memory Trace Block ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_memory_trace_block/
+
+■ ディレクトリ構造
+reaction_memory_trace_block/
+├── raw/
+│   └── trigger_event_log.json         # トリガー発生時の生ログ
+├── filter/
+│   └── filter_decision_log.json       # フィルタ判定過程の記録
+├── core_output/
+│   └── response_output_log.json       # 実際の出力内容とパラメータ
+├── evaluation/
+│   └── human_feedback_register.json   # マスター・マコ・CPUによるフィードバック
+├── analysis/
+│   └── reaction_summary_gen.py        # 過去反応の分析と要約出力
+└── rollback/
+    └── rollback_snap_store.json       # 巻き戻し用スナップ保存領域
+
+■ 干渉点
+| ログ種別                   | 提供元ブロック                       | 用途                                         |
+|----------------------------|--------------------------------------|----------------------------------------------|
+| trigger_event_log.json     | reaction_trigger_unit                | 発火トリガーの根拠記録                       |
+| filter_decision_log.json   | reaction_filter_block                | 通過／棄却の履歴と理由                       |
+| response_output_log.json   | reaction_core_block                  | 出力内容と関連パラメータ記録                 |
+| human_feedback_register.json | マスター・マコ・CPU共用           | 各反応に対する主観的評価                     |
+| rollback_snap_store.json   | 各ブロック共通                       | 任意時点への再構成・状態復元に使用           |
+
+■ 設計上の注意点
+- raw/以下のログは絶対に改変不可（証拠保全）
+- evaluation/の評価はログ本体と分離し、マスター・マコ・CPUによる人間・AI間評価を可能とする
+- rollback/のデータ保持期間・世代数は構造設定により制限可能
