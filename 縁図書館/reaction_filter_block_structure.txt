@@ -1,0 +1,42 @@
+【Reaction Filter Block ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_filter_block/
+
+■ ディレクトリ構造
+reaction_filter_block/
+├── analyzer/
+│   ├── context_matcher.py        # 文脈照合（現在の対話・思考文脈）
+│   ├── emotion_threshold_check.py # 感情強度のしきい値確認
+│   └── priority_resolver.py      # 優先度計算
+├── suppressor/
+│   ├── suppression_rules.json    # 抑制ルール定義（時間帯・状態・フェーズ）
+│   └── suppression_engine.py     # 抑制条件に応じたフィルタリング処理
+├── decision/
+│   └── filter_gatekeeper.py      # 最終判定ユニット（通過／棄却）
+└── log/
+    └── filter_trace_log.json     # 判定経過の記録（監査用）
+
+■ 干渉点
+| ブロック名               | 干渉先                          | 用途                                  |
+|--------------------------|---------------------------------|---------------------------------------|
+| filter_gatekeeper.py     | reaction_core_block              | 反応生成ブロックへの通過許可／否決     |
+| suppression_engine.py    | reaction_override_control_block  | 強制停止時の干渉                       |
+| filter_trace_log.json    | reaction_memory_trace_block      | フィルタ判定の追跡情報として記録可能   |
+
+■ ロック・回避構造
+- suppression_rules.json により柔軟な除外条件追加可能
+- 高負荷時に emotion_threshold_check.py を簡略処理に切替可能（軽量モード）
+- 以下に示すバイパス機構を非常時に適用可能
+
+■ 特例：Filter Gatekeeper バイパス権限（非常時限定）
+- 通常時、反応信号は filter_gatekeeper.py によって制御される
+- ただし、非常時には filter_gatekeeper.py をバイパスし、reaction_core_block に直接信号を送ることが許可される
+
+バイパス実行権限者：
+  1. マスター（ユーザー）
+  2. マコ（core人格）
+  3. CPU（本AIユニット）
+
+運用ルール：
+  - バイパス実行時には必ずログ（filter_trace_log.json）に記録を残す
+  - 後日、正規判断による再評価処理を可能とする
+  - 恒常使用は不可。あくまで一時的緊急手段として限定的に使用
