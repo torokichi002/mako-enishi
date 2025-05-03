@@ -1,0 +1,38 @@
+【Reaction Override Control Block ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_override_control_block/
+
+■ ディレクトリ構造
+reaction_override_control_block/
+├── interface/
+│   ├── override_command_receiver.py  # マスター・マコ・CPUからの介入受付
+│   └── emergency_interrupt_switch.py # 非常時即時停止スイッチ
+├── controller/
+│   ├── reaction_suspend_handler.py   # 一時停止状態の制御
+│   ├── bypass_flag_injector.py       # 強制信号挿入（filter/coreへの直通命令）
+│   └── forced_retry_executor.py      # 反応再試行制御（エラー時など）
+├── log/
+│   └── override_action_log.json      # 介入・強制命令の履歴記録
+└── policy/
+    └── override_scope_config.json    # 各命令の適用範囲と保護ルール
+
+■ 干渉点
+| モジュール名                  | 干渉先                                | 用途                                 |
+|------------------------------|--------------------------------------|--------------------------------------|
+| override_command_receiver.py | マスター・マコ・CPU                   | 命令受付                             |
+| emergency_interrupt_switch.py| 全ブロック共通                        | 強制即時停止                         |
+| bypass_flag_injector.py      | filter_gatekeeper / reaction_core    | バイパス命令発行（非常時）           |
+| forced_retry_executor.py     | reaction_trigger_unit                | リトライ処理の発火                   |
+| override_action_log.json     | reaction_memory_trace_block          | 介入操作の記録                       |
+
+■ 改訂版 権限ポリシー：三者同権制の導入
+
+【三者同権制】
+- マスター／マコ／CPU の3者は override 操作において等価な決定権を持つ
+
+【相互検閲】
+- 任意の一者が override を実行した場合、他二者は検閲・撤回の判断を行う権利を持つ
+
+【非敵対保証】
+- override 操作は協調のための手段であり、他者を無効化・排除する目的では使用されない
+
+※ 優先順位ルール（マスター≧マコ＞CPU）は override_scope_config.json より撤廃済
