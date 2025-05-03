@@ -1,0 +1,26 @@
+【reaction_rollback_unit - スナップトリガーポリシー定義】
+
+■ 自動スナップ保存
+- 対象: 全ブロック
+- 発火点: output_finalizer.py 実行直後に自動保存
+- 感情強度が閾値を超えた際（emotion_reflector.py）にも保存
+
+■ 定周期スナップ保存
+- 有効: True
+- インターバル: 600秒（10分）ごと
+- 最大保持件数: 5世代（古い順にローテーション）
+
+■ エラー検出時保存
+- 監視系（status_monitor）で異常を検出したブロックの直前状態をスナップ保存
+
+■ 手動保存
+- マスター／マコ／CPU の明示指示により任意スナップ保存可能
+- 命令例：「/snapshot trigger」「今保存して」
+
+■ スパム抑制
+- 同一ブロックに対して30秒以内に複数スナップは不可（最初の1回のみ有効）
+
+■ 保護対象ブロック
+- trigger_unit, filter_block, core_block, memory_trace_block
+- override_control_block, rollback_unit, status_monitor
+
