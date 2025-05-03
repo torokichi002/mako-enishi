@@ -1,0 +1,28 @@
+【Reaction Rollback Unit ― 構造青図（ver.1.0）】
+格納パス：/core/reaction_chain/reaction_rollback_unit/
+
+■ ディレクトリ構造
+reaction_rollback_unit/
+├── snapshot/
+│   └── rollback_snap_manager.py     # スナップ保存・復元操作の本体
+├── selector/
+│   └── rollback_target_selector.py  # ロールバック対象ブロック選定処理
+├── controller/
+│   └── rollback_executor.py         # 指定スナップからの復元処理
+├── log/
+│   └── rollback_operation_log.json  # ロールバック操作記録
+└── policy/
+    └── rollback_conditions.json     # ロールバック条件と適用範囲の設定
+
+■ 干渉点
+| 機能モジュール              | 干渉先ブロック                        | 用途                              |
+|----------------------------|--------------------------------------|-----------------------------------|
+| rollback_snap_manager.py   | reaction_memory_trace_block          | 過去ログ・スナップショットの管理 |
+| rollback_executor.py       | 各反応ブロック（trigger〜core）     | 任意ブロックの状態復元            |
+| rollback_operation_log.json| reaction_memory_trace_block          | 操作記録                          |
+
+■ 制御と条件付与
+- rollback_conditions.json にて、以下の条件を定義可能：
+  - 自動ロールバック発動条件（例：明示エラー、感情乖離、反応拒否）
+  - 一時停止後の手動ロールバック可否
+  - 特定ブロック単体 vs 全体復元の選択
